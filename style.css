@@ -3,13 +3,20 @@
     background: #F8F8F8;
     max-width: 1120px;
     margin: 0 auto;
-}
-
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0 56px,
+        rgba(248, 248, 248, 1) 56px 376px,
+        rgba(255, 255, 255, 1) 376px 391px, /*376px+15px=391px */
+        rgba(255, 255, 255, 1) 391px/* */
+      );
+    }
 .section__accent {
     font: 400 16px/32px 'TT Lakes', sans-serif;
     color: #1B1C21;
     padding: 0 16px 24px;
     border-bottom: 1px solid #D9FFF5;
+    text-transform: uppercase;
 }
 
 
@@ -25,7 +32,7 @@
     padding: 0 16px;
 }
 
-.brands__item {
+.brands__item{
     width: 240px;
     height: 72px;
     background: white;
@@ -38,7 +45,14 @@
     margin-bottom: 16px;
     margin-left: 16px;
 }
-
+.brands__item:hover {
+    border: 0;
+    cursor: pointer;
+}
+.header__control:hover{
+    background-color: rgb(255, 224, 234);
+    border-radius: 80%;
+}
 .toggle-button {
     font: 500 16px/24px 'TT Lakes', sans-serif;
     background: none;
@@ -90,30 +104,32 @@
     display: none;
 }
 
-/**/
-@media (max-width: 320px) {
-    
-    .swiper-container {
-        display: block;
-    }
-    
-    .brands__item {
-        width: 224px;
-        margin: 0 auto;
-    }
-    
+@media (min-width: 320px) {
     .swiper-pagination {
         position: static;
         margin-top: 16px;
-    }
-    .swiper-pagination{
         display: block;
+    }
+}
+@media (min-width: 767px){
+    .swiper-pagination {
+        position: static;
+        margin-top: 16px;
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .swiper-container {
+        display: block;
+    }
+    .brands__item {
+        width: 224px;
+        margin: 0 auto;
     }
     .expand{
         display: none;
     }
 }
-
 
 @media (min-width: 768px) {
     .brands-container.show-all {
@@ -151,13 +167,13 @@
         margin-left: 32px;
     }
 }
-.swiper__controls {
+.swiper__repeat {
     display: none;
     flex-wrap: wrap;
     padding: 0 24px;
     animation: fadeIn 0.3s ease;
 }
 
-.swiper__controls.show-all {
+.swiper__repeat.show-all {
     display: flex !important;
 }
