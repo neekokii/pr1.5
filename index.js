@@ -1,4 +1,3 @@
-// index.js
 function initSwiper() {
   if (window.innerWidth <= 767) {
       const swiper = new Swiper('.swiper-container', {
@@ -14,7 +13,7 @@ function initSwiper() {
 
 function toggleBrands() {
   const toggleBtn = document.querySelector('.expand');
-  const hiddenContent = document.querySelector('.swiper__controls');
+  const hiddenContent = document.querySelector('.swiper__repeat');
   
   if (toggleBtn && hiddenContent) {
       toggleBtn.addEventListener('click', (e) => {
