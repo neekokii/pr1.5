@@ -138,16 +138,12 @@
     .swiper-wrapper                                  {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 24px;
-        max-height: 168px; /* 3 ряда по 72px + gap */
-        flex-wrap: wrap;
         transition: max-height 0.3s ease;
     }
     
     .continuation__btn {
         display: flex !important;
     }
-
 }
 @media (min-width: 1120px) {
     .brands-container {
@@ -169,11 +165,11 @@
 }
 .swiper__repeat {
     display: none;
-    flex-wrap: wrap;
-    padding: 0 24px;
+    overflow: hidden;
     animation: fadeIn 0.3s ease;
 }
 
 .swiper__repeat.show-all {
+    position: static !important;
     display: flex !important;
 }
