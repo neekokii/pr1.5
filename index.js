@@ -19,8 +19,14 @@ function toggleBrands() {
       toggleBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const isExpanded = hiddenContent.classList.toggle('show-all');
-          
-          // Меняем текст и иконку
+
+          if (isExpanded) {
+              hiddenContent.style.position = 'static';
+          } else {
+              hiddenContent.style.position = '';
+              hiddenContent.style.marginTop = '';
+          }
+
           const textElement = toggleBtn.querySelector('p');
           const iconElement = toggleBtn.querySelector('img');
           
