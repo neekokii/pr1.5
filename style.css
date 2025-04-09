@@ -3,20 +3,19 @@
     background: #F8F8F8;
     max-width: 1120px;
     margin: 0 auto;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 1) 0 56px,
-        rgba(248, 248, 248, 1) 56px 376px,
-        rgba(255, 255, 255, 1) 376px 391px, /*376px+15px=391px */
-        rgba(255, 255, 255, 1) 391px/* */
-      );
+
+        background: rgba(248, 248, 248, 1);
     }
 .section__accent {
     font: 400 16px/32px 'TT Lakes', sans-serif;
     color: #1B1C21;
     padding: 0 16px 24px;
-    border-bottom: 1px solid #D9FFF5;
+    border-top:  1px solid #D9FFF5;
     text-transform: uppercase;
+    background: linear-gradient(to right, 
+    rgba(248, 248, 248, 1), /* Начальный цвет: белый */
+    rgba(255, 255, 255, 1)); /* Конечный цвет: светло-серый */
+  
 }
 
 
@@ -164,6 +163,7 @@
     }
 }
 .swiper__repeat {
+    margin: 0;
     display: none;
     overflow: hidden;
     animation: fadeIn 0.3s ease;
@@ -172,4 +172,184 @@
 .swiper__repeat.show-all {
     position: static !important;
     display: flex !important;
+}
+ul{
+    margin: 0 ;
+}@import "fonts";
+.brands {
+    background: #F8F8F8;
+    max-width: 1120px;
+    margin: 0 auto;
+
+        background: rgba(248, 248, 248, 1);
+    }
+.section__accent {
+    font: 400 16px/32px 'TT Lakes', sans-serif;
+    color: #1B1C21;
+    padding: 0 16px 24px;
+    border-top:  1px solid #D9FFF5;
+    text-transform: uppercase;
+    background: linear-gradient(to right, 
+    rgba(248, 248, 248, 1), /* Начальный цвет: белый */
+    rgba(255, 255, 255, 1)); /* Конечный цвет: светло-серый */
+  
+}
+
+
+.swiper-container {
+    width: auto;
+    overflow: hidden;
+}
+
+.brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.brands__item{
+    width: 240px;
+    height: 72px;
+    background: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+.brands__item:hover {
+    border: 0;
+    cursor: pointer;
+}
+.header__control:hover{
+    background-color: rgb(255, 224, 234);
+    border-radius: 80%;
+}
+.toggle-button {
+    font: 500 16px/24px 'TT Lakes', sans-serif;
+    background: none;
+    border: none;
+    padding-left: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url('images/expand0.png') no-repeat center;
+}
+/*бывалая ссылка*/
+.continuation__btn {
+    display: flex;
+    justify-self: start;
+    height: 24px;
+    width: 132px;
+    margin: 0;
+    padding: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+
+.expand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  border-width: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.extension {
+    margin-right: 8px;
+  }
+  .swiper-pagination{
+    display: none;
+}
+
+@media (min-width: 320px) {
+    .swiper-pagination {
+        position: static;
+        margin-top: 16px;
+        display: block;
+    }
+}
+@media (min-width: 767px){
+    .swiper-pagination {
+        position: static;
+        margin-top: 16px;
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .swiper-container {
+        display: block;
+    }
+    .brands__item {
+        width: 224px;
+        margin: 0 auto;
+    }
+    .expand{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .brands-container.show-all {
+        max-height: 1000px;
+    }
+    .swiper-wrapper                                  {
+        display: flex;
+        flex-wrap: wrap;
+        transition: max-height 0.3s ease;
+    }
+    
+    .continuation__btn {
+        display: flex !important;
+    }
+}
+@media (min-width: 1120px) {
+    .brands-container {
+        gap: 32px;
+        padding: 0 32px;
+        max-height: 144px; /* 2 ряда по 72px + gap */
+        flex-wrap: wrap;
+    }
+    
+    .brands__item {
+        max-width: 224px;
+        flex-grow: 1;
+        margin-left:8px;   
+    }
+    
+    .continuation__btn {
+        margin-left: 32px;
+    }
+}
+.swiper__repeat {
+    margin: 0;
+    display: none;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+.swiper__repeat.show-all {
+    position: static !important;
+    display: flex !important;
+}
+ul{
+    margin: 0 ;
 }
