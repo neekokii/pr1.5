@@ -43,6 +43,9 @@
     margin-bottom: 16px;
     margin-left: 16px;
 }
+.button__margin{
+    margin-right: 16px;
+}
 .brands__item:hover {
     border: 0;
     cursor: pointer;
